@@ -38,9 +38,24 @@
 
 				.calil-link {
 					z-index: 999999;
-					position: absolute;
-					top: 0;
-					right: 0;
+					position: fixed;
+					bottom: 20px;
+					right: 20px;
+					width: 40px;
+					height: 40px;
+					border-radius: 100%;
+					overflow: hidden;
+					box-shadow: 0px 0px 10px -5px #777d83;
+					transition: transform .1s;
+				}
+
+				.calil-link:hover {
+					transform: scale(1.12);
+				}
+
+				.calil-image {
+					width: 100%;
+					height: 100%;
 				}
 			</style>
 		`
@@ -52,7 +67,7 @@
 		const html = `
 			<div class="calil-container">
 				<a class="calil-link" href="https://calil.jp/book/${asin}" target="_blank">
-					<img src="https://calil.jp/favicon-32x32.png">
+					<img class="calil-image" src="https://calil.jp/favicon-32x32.png">
 				</a>
 			</div>
 		`
